@@ -1,7 +1,16 @@
-# 2017_0626 include spinner
-from spinner import *   # ok!
-#import spinner # not OK
-#TODO: import spinnerDir # 2016_0721 works NOT - memory allocation error
-#import extDir #hello/goodbye - ok
-#OK: import lightsensor # lightsensor example 2017_0702
-#TODO: import neopixeldemo
+# generic main for Circuit layground Express
+# 2017-1023 PePo new
+
+#''' Arc Reactor
+import arcreactor
+#'''
+
+''' demo tachometer with fiddler
+# 2017-1023 problem: Could not hit desired target sample rate! + RED neopixels
+#import lightsensor.demo
+import lightsensor.tachometer
+#'''
+
+''' demo # CircuitPython Advanced Fidget Spinner
+import spinner
+#'''

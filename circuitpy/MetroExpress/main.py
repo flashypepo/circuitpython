@@ -3,22 +3,49 @@
 import time
 import gc
 
-#import blinky   # blinky Yurobot RED-LED, OK
-#import buzzerdemo  # buzzer demo, Ctrl-C to stop, OK
-#import ledsdemo   # LEDS demo, OK
+try:
+    ''' Blinking RED-led, Ctrl-C to stop
+    print('Blinky-red demo...')
+    import blinky   # blinky Yurobot RED-LED, Cntrl-C abort
+    #'''
 
-''' LED matrix smileys, OK
-import smileys 
-time.sleep(0.5) #wait a little time
-smileys.clear(smileys.lefteye)
-smileys.clear(smileys.righteye)
-#'''
-''' bar-LED demo
-import bargraphdemo
-#'''
+    #''' 2017-0819 blinky onboard Neopixel
+    #import blinkneopixel
 
-#''' ICONS demo on matrices
-import iconsdemo
-#'''
-gc.collect()
-print('mem free:', gc.mem_free())
+    ''' buzzer demo, Ctrl-C to stop
+    print('Buzzer demo...')
+    import buzzerdemo
+    #'''
+
+    #''' blinking red & blue LEDS, Ctrl-C to stop
+    print('LEDs demo...')
+    import ledsdemo   # LEDS demo, OK
+    #'''
+
+    ''' LED matrix smileys, Ctrl-C to stop
+    print('Smileys demo...')
+    import smileys 
+    time.sleep(0.5) #wait a little time
+    smileys.clear(smileys.lefteye)
+    smileys.clear(smileys.righteye)
+    #'''
+
+    ''' TODO: bar-LED demo
+    print('Bargraph demo...')
+    import bargraphdemo
+    #'''
+
+    ''' ICONS demo on matrices, Ctrl-C to stop
+    #import weatherdemo #problem: number display turned
+    print('Weather icons demo...')
+    import weathericonsdemo
+    #'''
+
+    ''' Smiley ICONS demo, Ctrl-C to stop
+    print('Smiley icons demo...')
+    import smileyiconsdemo
+    #'''
+
+except:
+    gc.collect()
+    print('mem free:', gc.mem_free())
